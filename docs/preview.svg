@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" fill="none">
+  <!-- Background with subtle modern gradient -->
+  <rect width="1200" height="680" rx="16" fill="#0f172a" />
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="1200" height="64" rx="16" fill="#1e293b" />
+  <circle cx="36" cy="32" r="6" fill="#ef4444" />
+  <circle cx="56" cy="32" r="6" fill="#f59e0b" />
+  <circle cx="76" cy="32" r="6" fill="#10b981" />
+  <text x="110" y="38" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">QRCraft PRO | GDG on Campus SRM Recruitment Project</text>
+  
+  <!-- Navigation Tabs mock -->
+  <rect x="480" y="14" width="240" height="36" rx="8" fill="#0f172a" />
+  <rect x="484" y="18" width="76" height="28" rx="6" fill="#4f46e5" />
+  <text x="500" y="36" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Generate</text>
+  <text x="580" y="36" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Scan</text>
+  <text x="640" y="36" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">History</text>
+
+  <!-- Left Column: Generator Form Preview -->
+  <g transform="translate(60, 96)">
+    <rect width="660" height="520" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    
+    <!-- Type Selector Bar -->
+    <rect x="24" y="24" width="80" height="60" rx="10" fill="#312e81" stroke="#6366f1" stroke-width="1.5" />
+    <text x="44" y="58" fill="#c7d2fe" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">URL</text>
+    
+    <rect x="114" y="24" width="80" height="60" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="134" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Wi-Fi</text>
+
+    <rect x="204" y="24" width="80" height="60" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="220" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">vCard</text>
+
+    <rect x="294" y="24" width="80" height="60" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="312" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Email</text>
+
+    <rect x="384" y="24" width="80" height="60" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="400" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Phone</text>
+
+    <rect x="474" y="24" width="80" height="60" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="495" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">UPI</text>
+
+    <rect x="564" y="24" width="72" height="60" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="582" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Text</text>
+
+    <!-- Inputs -->
+    <text x="24" y="125" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">DESTINATION URL</text>
+    <rect x="24" y="136" width="612" height="44" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="40" y="163" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">https://github.com/shreyanshshaindilya/gdg</text>
+
+    <!-- Design Customizer -->
+    <text x="24" y="220" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">STYLING &amp; PALETTE PRESETS</text>
+    
+    <rect x="24" y="235" width="110" height="34" rx="8" fill="#0f172a" stroke="#6366f1" stroke-width="1" />
+    <circle cx="44" cy="252" r="6" fill="#4f46e5" />
+    <text x="58" y="256" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">Indigo</text>
+
+    <rect x="144" y="235" width="110" height="34" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <circle cx="164" cy="252" r="6" fill="#10b981" />
+    <text x="178" y="256" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">Emerald</text>
+
+    <rect x="264" y="235" width="110" height="34" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <circle cx="284" cy="252" r="6" fill="#f43f5e" />
+    <text x="298" y="256" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">Crimson</text>
+
+    <rect x="384" y="235" width="110" height="34" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <circle cx="404" cy="252" r="6" fill="#8b5cf6" />
+    <text x="418" y="256" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12">Purple</text>
+
+    <!-- Brand Logo Zone -->
+    <rect x="24" y="300" width="612" height="70" rx="10" fill="#0f172a" stroke="#334155" stroke-dasharray="4" stroke-width="1.5" />
+    <text x="220" y="340" fill="#818cf8" font-family="system-ui, sans-serif" font-size="13" font-weight="600">✦ Center Brand Icon / Logo Embedded</text>
+    
+    <!-- Sliders -->
+    <text x="24" y="410" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">ERROR CORRECTION LEVEL: HIGH (30% RECOVERY)</text>
+    <rect x="24" y="424" width="612" height="36" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="40" y="447" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12">High (30% redundancy - Ideal for center logos &amp; damage recovery)</text>
+  </g>
+
+  <!-- Right Column: Live QR Preview & Export -->
+  <g transform="translate(750, 96)">
+    <rect width="390" height="520" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="24" y="36" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">LIVE PREVIEW</text>
+
+    <!-- White Canvas Container -->
+    <rect x="45" y="60" width="300" height="300" rx="16" fill="#ffffff" />
+    
+    <!-- Stylized QR Pattern Mockup -->
+    <!-- Top-left finder -->
+    <rect x="75" y="90" width="60" height="60" rx="6" fill="#0f172a" />
+    <rect x="87" y="102" width="36" height="36" rx="3" fill="#ffffff" />
+    <rect x="95" y="110" width="20" height="20" rx="2" fill="#4f46e5" />
+
+    <!-- Top-right finder -->
+    <rect x="255" y="90" width="60" height="60" rx="6" fill="#0f172a" />
+    <rect x="267" y="102" width="36" height="36" rx="3" fill="#ffffff" />
+    <rect x="275" y="110" width="20" height="20" rx="2" fill="#4f46e5" />
+
+    <!-- Bottom-left finder -->
+    <rect x="75" y="270" width="60" height="60" rx="6" fill="#0f172a" />
+    <rect x="87" y="282" width="36" height="36" rx="3" fill="#ffffff" />
+    <rect x="95" y="290" width="20" height="20" rx="2" fill="#4f46e5" />
+
+    <!-- Data bits -->
+    <rect x="155" y="95" width="16" height="16" rx="2" fill="#0f172a" />
+    <rect x="180" y="105" width="16" height="16" rx="2" fill="#4f46e5" />
+    <rect x="215" y="95" width="16" height="16" rx="2" fill="#0f172a" />
+    <rect x="145" y="130" width="16" height="16" rx="2" fill="#0f172a" />
+    <rect x="225" y="130" width="16" height="16" rx="2" fill="#4f46e5" />
+    <rect x="155" y="270" width="16" height="16" rx="2" fill="#0f172a" />
+    <rect x="250" y="270" width="16" height="16" rx="2" fill="#4f46e5" />
+    <rect x="280" y="290" width="16" height="16" rx="2" fill="#0f172a" />
+
+    <!-- Center Logo Badge -->
+    <rect x="165" y="180" width="60" height="60" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" />
+    <rect x="175" y="190" width="40" height="40" rx="8" fill="#4f46e5" />
+    <text x="183" y="215" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">&lt;/&gt;</text>
+
+    <!-- Download Buttons -->
+    <rect x="45" y="385" width="300" height="44" rx="10" fill="#4f46e5" />
+    <text x="135" y="412" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Download PNG (HD)</text>
+
+    <rect x="45" y="440" width="145" height="38" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="80" y="464" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Vector SVG</text>
+
+    <rect x="200" y="440" width="145" height="38" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="235" y="464" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Copy Image</text>
+  </g>
+</svg>
