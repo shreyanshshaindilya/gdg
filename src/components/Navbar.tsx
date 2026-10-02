@@ -21,15 +21,15 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Brand / Logo */}
         <div className="flex items-center space-x-3 cursor-pointer select-none" onClick={() => setActiveTab('generator')}>
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-500 flex items-center justify-center text-white shadow-md shadow-indigo-500/25">
+          <div className="w-10 h-10 rounded-xl bg-slate-900 dark:bg-white flex items-center justify-center text-white dark:text-slate-950 shadow-md shadow-slate-900/15 dark:shadow-white/10 transition-colors">
             <QrCode className="w-6 h-6" />
           </div>
           <div>
             <div className="flex items-center space-x-1.5">
-              <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-700 dark:from-white dark:via-indigo-200 dark:to-slate-300 bg-clip-text text-transparent">
+              <span className="font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">
                 QRCraft
               </span>
-              <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800/60">
+              <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
                 PRO
               </span>
             </div>
@@ -45,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => setActiveTab('generator')}
             className={`flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'generator'
-                ? 'bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => setActiveTab('scanner')}
             className={`flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'scanner'
-                ? 'bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
@@ -69,14 +69,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => setActiveTab('history')}
             className={`relative flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'history'
-                ? 'bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm'
                 : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             }`}
           >
             <History className="w-4 h-4" />
             <span>History</span>
             {historyCount > 0 && (
-              <span className="w-4 h-4 rounded-full bg-indigo-600 text-white text-[10px] flex items-center justify-center font-bold">
+              <span className="w-4 h-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-[10px] flex items-center justify-center font-bold">
                 {historyCount > 9 ? '9+' : historyCount}
               </span>
             )}
@@ -88,9 +88,20 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             onClick={() => setDarkMode(!darkMode)}
             title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-            className="p-2 rounded-xl text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            className="flex items-center space-x-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-100/80 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold transition"
           >
-            {darkMode ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5" />}
+            {darkMode ? (
+              <>
+                <Sun className="w-4 h-4 text-amber-400" />
+                <span className="hidden sm:inline">Light</span>
+              </>
+            ) : (
+              <>
+                <Moon className="w-4 h-4 text-slate-700" />
+                <span className="hidden sm:inline">Dark</span>
+              </>
+            )}
           </button>
 
           <a

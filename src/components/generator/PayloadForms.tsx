@@ -50,7 +50,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
               placeholder="https://example.com"
               value={urlValue}
               onChange={(e) => setUrlValue(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm transition"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100 focus:border-transparent text-sm transition"
             />
           </div>
           <p className="text-xs text-slate-500 dark:text-slate-400">
@@ -75,7 +75,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
             placeholder="Type or paste any text, memo, or raw data here..."
             value={textValue}
             onChange={(e) => setTextValue(e.target.value)}
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm transition resize-none"
+            className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100 focus:border-transparent text-sm transition resize-none"
           />
         </div>
       )}
@@ -93,7 +93,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="e.g. Home_5G"
                 value={wifiPayload.ssid}
                 onChange={(e) => setWifiPayload({ ...wifiPayload, ssid: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
 
@@ -109,7 +109,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                     encryption: e.target.value as 'WPA' | 'WEP' | 'nopass',
                   })
                 }
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               >
                 <option value="WPA">WPA / WPA2 / WPA3 (Recommended)</option>
                 <option value="WEP">WEP</option>
@@ -128,7 +128,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="Enter network password"
                 value={wifiPayload.password}
                 onChange={(e) => setWifiPayload({ ...wifiPayload, password: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
           )}
@@ -139,7 +139,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
               id="hiddenSsid"
               checked={wifiPayload.hidden}
               onChange={(e) => setWifiPayload({ ...wifiPayload, hidden: e.target.checked })}
-              className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 border-slate-300 dark:border-slate-700"
+              className="w-4 h-4 rounded accent-slate-900 dark:accent-white border-slate-300 dark:border-slate-700"
             />
             <label htmlFor="hiddenSsid" className="text-xs text-slate-600 dark:text-slate-300 cursor-pointer">
               Hidden Network (SSID is not broadcasting)
@@ -161,7 +161,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="John"
                 value={vcardPayload.firstName}
                 onChange={(e) => setVcardPayload({ ...vcardPayload, firstName: e.target.value })}
-                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
             <div>
@@ -173,7 +173,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="Doe"
                 value={vcardPayload.lastName}
                 onChange={(e) => setVcardPayload({ ...vcardPayload, lastName: e.target.value })}
-                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
           </div>
@@ -188,7 +188,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="+91 98765 43210"
                 value={vcardPayload.phone}
                 onChange={(e) => setVcardPayload({ ...vcardPayload, phone: e.target.value })}
-                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
             <div>
@@ -200,7 +200,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="john.doe@example.com"
                 value={vcardPayload.email}
                 onChange={(e) => setVcardPayload({ ...vcardPayload, email: e.target.value })}
-                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
           </div>
@@ -215,7 +215,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="Acme Corp"
                 value={vcardPayload.organization}
                 onChange={(e) => setVcardPayload({ ...vcardPayload, organization: e.target.value })}
-                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
             <div>
@@ -227,7 +227,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="Software Engineer"
                 value={vcardPayload.title}
                 onChange={(e) => setVcardPayload({ ...vcardPayload, title: e.target.value })}
-                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
           </div>
@@ -241,7 +241,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
               placeholder="https://portfolio.me"
               value={vcardPayload.website}
               onChange={(e) => setVcardPayload({ ...vcardPayload, website: e.target.value })}
-              className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
             />
           </div>
         </div>
@@ -259,7 +259,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
               placeholder="hello@company.com"
               value={emailPayload.to}
               onChange={(e) => setEmailPayload({ ...emailPayload, to: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
             />
           </div>
           <div>
@@ -271,7 +271,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
               placeholder="Inquiry / Feedback"
               value={emailPayload.subject}
               onChange={(e) => setEmailPayload({ ...emailPayload, subject: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
             />
           </div>
           <div>
@@ -283,7 +283,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
               placeholder="Write pre-filled message text..."
               value={emailPayload.body}
               onChange={(e) => setEmailPayload({ ...emailPayload, body: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100 resize-none"
             />
           </div>
         </div>
@@ -299,7 +299,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 name="phoneMode"
                 checked={phonePayload.mode === 'tel'}
                 onChange={() => setPhonePayload({ ...phonePayload, mode: 'tel' })}
-                className="text-indigo-600 focus:ring-indigo-500"
+                className="accent-slate-900 dark:accent-white"
               />
               <span>Direct Phone Call</span>
             </label>
@@ -309,7 +309,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 name="phoneMode"
                 checked={phonePayload.mode === 'sms'}
                 onChange={() => setPhonePayload({ ...phonePayload, mode: 'sms' })}
-                className="text-indigo-600 focus:ring-indigo-500"
+                className="accent-slate-900 dark:accent-white"
               />
               <span>Send SMS Text</span>
             </label>
@@ -324,7 +324,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
               placeholder="+91 9876543210"
               value={phonePayload.phone}
               onChange={(e) => setPhonePayload({ ...phonePayload, phone: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
             />
           </div>
 
@@ -338,7 +338,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="Hi, I am reaching out regarding..."
                 value={phonePayload.smsMessage}
                 onChange={(e) => setPhonePayload({ ...phonePayload, smsMessage: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100 resize-none"
               />
             </div>
           )}
@@ -358,7 +358,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="username@okhdfcbank"
                 value={upiPayload.vpa}
                 onChange={(e) => setUpiPayload({ ...upiPayload, vpa: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
             <div>
@@ -370,7 +370,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="Merchant / Personal Name"
                 value={upiPayload.name}
                 onChange={(e) => setUpiPayload({ ...upiPayload, name: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
           </div>
@@ -387,7 +387,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 step="0.01"
                 value={upiPayload.amount}
                 onChange={(e) => setUpiPayload({ ...upiPayload, amount: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
             <div>
@@ -399,7 +399,7 @@ export const PayloadForms: React.FC<PayloadFormsProps> = ({
                 placeholder="Dinner payment, etc."
                 value={upiPayload.note}
                 onChange={(e) => setUpiPayload({ ...upiPayload, note: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100"
               />
             </div>
           </div>

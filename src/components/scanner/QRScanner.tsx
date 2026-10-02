@@ -46,7 +46,7 @@ export const QRScanner: React.FC<QRScannerProps> = ({
               onClick={() => setScanMode('camera')}
               className={`flex items-center space-x-2 px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition ${
                 scanMode === 'camera'
-                  ? 'bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                  ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm font-bold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -58,7 +58,7 @@ export const QRScanner: React.FC<QRScannerProps> = ({
               onClick={() => setScanMode('file')}
               className={`flex items-center space-x-2 px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition ${
                 scanMode === 'file'
-                  ? 'bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                  ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm font-bold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >

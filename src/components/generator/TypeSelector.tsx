@@ -30,14 +30,14 @@ export const TypeSelector: React.FC<TypeSelectorProps> = ({ currentType, onSelec
             onClick={() => onSelectType(t.id)}
             className={`flex flex-col items-center justify-center p-3 rounded-xl border text-center transition-all duration-200 select-none ${
               isSelected
-                ? 'bg-indigo-50/90 dark:bg-indigo-950/60 border-indigo-500 dark:border-indigo-400 text-indigo-700 dark:text-indigo-300 ring-2 ring-indigo-500/20 shadow-sm'
-                : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50'
+                ? 'bg-slate-100 dark:bg-slate-800 border-slate-900 dark:border-white text-slate-950 dark:text-white ring-2 ring-slate-900/10 dark:ring-white/20 shadow-sm'
+                : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-850'
             }`}
           >
             <div
               className={`p-2 rounded-lg mb-1.5 transition-colors ${
                 isSelected
-                  ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30'
+                  ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-950 shadow-sm shadow-slate-900/20 dark:shadow-white/20'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
               }`}
             >

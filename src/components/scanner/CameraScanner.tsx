@@ -157,12 +157,12 @@ export const CameraScanner: React.FC<CameraScannerProps> = ({ onScanSuccess, onS
         {/* Viewfinder Overlay with Animated Laser Line */}
         {isScanning && (
           <div className="absolute inset-0 pointer-events-none flex items-center justify-center p-8">
-            <div className="relative w-64 h-64 border-2 border-dashed border-indigo-400/80 rounded-2xl">
+            <div className="relative w-64 h-64 border-2 border-dashed border-sky-400/60 rounded-2xl">
               {/* Corner brackets */}
-              <div className="absolute -top-1 -left-1 w-6 h-6 border-t-4 border-l-4 border-indigo-500 rounded-tl-lg" />
-              <div className="absolute -top-1 -right-1 w-6 h-6 border-t-4 border-r-4 border-indigo-500 rounded-tr-lg" />
-              <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-4 border-l-4 border-indigo-500 rounded-bl-lg" />
-              <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-4 border-r-4 border-indigo-500 rounded-br-lg" />
+              <div className="absolute -top-1 -left-1 w-6 h-6 border-t-4 border-l-4 border-sky-400 rounded-tl-lg" />
+              <div className="absolute -top-1 -right-1 w-6 h-6 border-t-4 border-r-4 border-sky-400 rounded-tr-lg" />
+              <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-4 border-l-4 border-sky-400 rounded-bl-lg" />
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-4 border-r-4 border-sky-400 rounded-br-lg" />
 
               {/* Scanning Laser Beam */}
               <div className="scan-line animate-scan" />
@@ -180,7 +180,7 @@ export const CameraScanner: React.FC<CameraScannerProps> = ({ onScanSuccess, onS
             {cameras.length > 0 && (
               <button
                 onClick={() => startScanner(selectedCameraId)}
-                className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold flex items-center space-x-1.5 transition"
+                className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-950 text-xs font-semibold flex items-center space-x-1.5 transition shadow-sm"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
                 <span>Retry Camera</span>

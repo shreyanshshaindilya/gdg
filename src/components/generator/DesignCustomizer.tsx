@@ -9,11 +9,11 @@ interface DesignCustomizerProps {
 
 const COLOR_PRESETS = [
   { name: 'Classic Dark', fg: '#0f172a', bg: '#ffffff' },
-  { name: 'Indigo Dream', fg: '#4338ca', bg: '#eef2ff' },
+  { name: 'Pure Dark', fg: '#ffffff', bg: '#09090b' },
+  { name: 'Slate Minimal', fg: '#1e293b', bg: '#f1f5f9' },
+  { name: 'Onyx Monochrome', fg: '#18181b', bg: '#fafafa' },
+  { name: 'Cyber Sky', fg: '#0284c7', bg: '#f0f9ff' },
   { name: 'Emerald Forest', fg: '#065f46', bg: '#ecfdf5' },
-  { name: 'Midnight Purple', fg: '#581c87', bg: '#faf5ff' },
-  { name: 'Sunset Crimson', fg: '#9f1239', bg: '#fff1f2' },
-  { name: 'Cyber Neon', fg: '#0284c7', bg: '#f0f9ff' },
 ];
 
 export const DesignCustomizer: React.FC<DesignCustomizerProps> = ({ config, setConfig }) => {
@@ -48,7 +48,7 @@ export const DesignCustomizer: React.FC<DesignCustomizerProps> = ({ config, setC
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm space-y-5">
       <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200 flex items-center space-x-2">
-        <Sliders className="w-4 h-4 text-indigo-500" />
+        <Sliders className="w-4 h-4 text-slate-700 dark:text-slate-300" />
         <span>Design & Styling Options</span>
       </h3>
 
@@ -70,7 +70,7 @@ export const DesignCustomizer: React.FC<DesignCustomizerProps> = ({ config, setC
                   transparentBg: false,
                 }))
               }
-              className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-indigo-400 text-xs transition"
+              className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 text-xs transition"
             >
               <span
                 className="w-3.5 h-3.5 rounded-full border border-black/10 shrink-0"
@@ -132,7 +132,7 @@ export const DesignCustomizer: React.FC<DesignCustomizerProps> = ({ config, setC
               id="transBg"
               checked={config.transparentBg}
               onChange={(e) => setConfig({ ...config, transparentBg: e.target.checked })}
-              className="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 border-slate-300 dark:border-slate-700"
+              className="w-4 h-4 rounded accent-slate-900 dark:accent-white border-slate-300 dark:border-slate-700"
             />
             <label htmlFor="transBg" className="text-xs text-slate-600 dark:text-slate-400 cursor-pointer">
               Transparent background (PNG/SVG)
@@ -145,7 +145,7 @@ export const DesignCustomizer: React.FC<DesignCustomizerProps> = ({ config, setC
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
         <div>
           <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5 flex items-center space-x-1">
-            <Shield className="w-3.5 h-3.5 text-indigo-500" />
+            <Shield className="w-3.5 h-3.5 text-slate-700 dark:text-slate-300" />
             <span>Error Correction Level</span>
           </label>
           <select
@@ -157,7 +157,7 @@ export const DesignCustomizer: React.FC<DesignCustomizerProps> = ({ config, setC
                 errorCorrectionLevel: e.target.value as ErrorCorrectionLevel,
               })
             }
-            className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs focus:ring-2 focus:ring-indigo-500 disabled:opacity-60"
+            className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-xs focus:ring-2 focus:ring-slate-900 dark:focus:ring-slate-100 disabled:opacity-60"
           >
             <option value="L">Low (7% recovery, denser modules)</option>
             <option value="M">Medium (15% recovery - Standard)</option>
@@ -182,7 +182,7 @@ export const DesignCustomizer: React.FC<DesignCustomizerProps> = ({ config, setC
             step="1"
             value={config.margin}
             onChange={(e) => setConfig({ ...config, margin: Number(e.target.value) })}
-            className="w-full accent-indigo-600 cursor-pointer"
+            className="w-full accent-slate-900 dark:accent-white cursor-pointer"
           />
         </div>
       </div>
@@ -190,7 +190,7 @@ export const DesignCustomizer: React.FC<DesignCustomizerProps> = ({ config, setC
       {/* Center Logo Upload */}
       <div className="pt-2 border-t border-slate-200 dark:border-slate-800">
         <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2 flex items-center space-x-1.5">
-          <ImageIcon className="w-3.5 h-3.5 text-indigo-500" />
+          <ImageIcon className="w-3.5 h-3.5 text-slate-700 dark:text-slate-300" />
           <span>Center Logo / Brand Icon (Optional)</span>
         </label>
 
@@ -227,9 +227,9 @@ export const DesignCustomizer: React.FC<DesignCustomizerProps> = ({ config, setC
             <button
               type="button"
               onClick={() => fileInputRef.current?.click()}
-              className="w-full py-3 px-4 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 bg-slate-50/50 dark:bg-slate-800/40 flex items-center justify-center space-x-2 text-xs font-semibold text-slate-600 dark:text-slate-300 transition"
+              className="w-full py-3 px-4 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 bg-slate-50/50 dark:bg-slate-800/40 flex items-center justify-center space-x-2 text-xs font-semibold text-slate-600 dark:text-slate-300 transition"
             >
-              <Upload className="w-4 h-4 text-indigo-500" />
+              <Upload className="w-4 h-4 text-slate-700 dark:text-slate-300" />
               <span>Upload Custom Brand Logo (PNG, JPG, SVG)</span>
             </button>
           </div>

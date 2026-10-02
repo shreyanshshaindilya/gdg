@@ -105,7 +105,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({ config, onSaveToHistory, o
       </div>
 
       {/* QR Code Canvas Canvas Frame */}
-      <div className="relative p-4 rounded-2xl bg-white border border-slate-200/80 dark:border-slate-700/60 shadow-lg shadow-indigo-500/5 flex items-center justify-center">
+      <div className="relative p-4 rounded-2xl bg-white border border-slate-200/80 dark:border-slate-700/60 shadow-lg shadow-slate-900/5 dark:shadow-black/40 flex items-center justify-center">
         {config.rawValue ? (
           <canvas
             ref={canvasRef}
@@ -132,7 +132,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({ config, onSaveToHistory, o
               onClick={() => setDownloadResolution(res)}
               className={`py-1 rounded-lg text-xs font-semibold border transition ${
                 downloadResolution === res
-                  ? 'bg-indigo-50 dark:bg-indigo-950 border-indigo-500 text-indigo-700 dark:text-indigo-300'
+                  ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-950 border-slate-900 dark:border-white shadow-xs'
                   : 'border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400'
               }`}
             >
@@ -147,7 +147,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({ config, onSaveToHistory, o
         <button
           onClick={handleDownloadPng}
           disabled={!config.rawValue}
-          className="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center space-x-2 shadow-md shadow-indigo-600/20 disabled:opacity-50 disabled:cursor-not-allowed transition"
+          className="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-950 font-semibold text-xs sm:text-sm flex items-center justify-center space-x-2 shadow-md shadow-slate-900/10 dark:shadow-white/10 disabled:opacity-50 disabled:cursor-not-allowed transition"
         >
           <Download className="w-4 h-4" />
           <span>Download PNG</span>
@@ -159,7 +159,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({ config, onSaveToHistory, o
             disabled={!config.rawValue}
             className="py-2 px-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-xs flex items-center justify-center space-x-1.5 disabled:opacity-50 transition"
           >
-            <FileCode className="w-4 h-4 text-indigo-500" />
+            <FileCode className="w-4 h-4 text-slate-700 dark:text-slate-300" />
             <span>Vector SVG</span>
           </button>
 
@@ -168,7 +168,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({ config, onSaveToHistory, o
             disabled={!config.rawValue}
             className="py-2 px-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-xs flex items-center justify-center space-x-1.5 disabled:opacity-50 transition"
           >
-            {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4 text-indigo-500" />}
+            {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4 text-slate-700 dark:text-slate-300" />}
             <span>{copied ? 'Copied!' : 'Copy Image'}</span>
           </button>
         </div>
@@ -191,7 +191,7 @@ export const QRPreview: React.FC<QRPreviewProps> = ({ config, onSaveToHistory, o
             disabled={!config.rawValue}
             className="py-2 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-xs flex items-center justify-center space-x-1.5 disabled:opacity-50 transition"
           >
-            <BookmarkCheck className="w-3.5 h-3.5 text-indigo-500" />
+            <BookmarkCheck className="w-3.5 h-3.5 text-slate-700 dark:text-slate-300" />
             <span>Save</span>
           </button>
         </div>

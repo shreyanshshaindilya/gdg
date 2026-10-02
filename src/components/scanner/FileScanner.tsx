@@ -90,8 +90,8 @@ export const FileScanner: React.FC<FileScannerProps> = ({ onScanSuccess, onNotif
         onClick={() => fileInputRef.current?.click()}
         className={`w-full aspect-square sm:h-80 rounded-3xl border-2 border-dashed flex flex-col items-center justify-center p-6 text-center cursor-pointer transition-all ${
           isDragging
-            ? 'border-indigo-500 bg-indigo-50/50 dark:bg-indigo-950/40 ring-4 ring-indigo-500/20'
-            : 'border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-indigo-400 dark:hover:border-indigo-500 shadow-sm'
+            ? 'border-slate-900 dark:border-white bg-slate-100 dark:bg-slate-800 ring-4 ring-slate-900/10 dark:ring-white/20'
+            : 'border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-slate-400 dark:hover:border-slate-600 shadow-sm'
         }`}
       >
         <input
@@ -108,7 +108,7 @@ export const FileScanner: React.FC<FileScannerProps> = ({ onScanSuccess, onNotif
 
         {isProcessing ? (
           <div className="flex flex-col items-center space-y-3">
-            <Loader2 className="w-10 h-10 text-indigo-600 animate-spin" />
+            <Loader2 className="w-10 h-10 text-slate-900 dark:text-white animate-spin" />
             <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
               Scanning image content...
             </span>
@@ -124,7 +124,7 @@ export const FileScanner: React.FC<FileScannerProps> = ({ onScanSuccess, onNotif
           </div>
         ) : (
           <div className="flex flex-col items-center space-y-3">
-            <div className="w-14 h-14 rounded-2xl bg-indigo-50 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+            <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 flex items-center justify-center">
               <UploadCloud className="w-7 h-7" />
             </div>
             <div>

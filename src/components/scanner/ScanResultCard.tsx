@@ -40,7 +40,7 @@ export const ScanResultCard: React.FC<ScanResultCardProps> = ({
   const getIcon = () => {
     switch (result.type) {
       case 'url':
-        return <ExternalLink className="w-5 h-5 text-indigo-500" />;
+        return <ExternalLink className="w-5 h-5 text-sky-500" />;
       case 'wifi':
         return <Wifi className="w-5 h-5 text-emerald-500" />;
       case 'vcard':
@@ -50,7 +50,7 @@ export const ScanResultCard: React.FC<ScanResultCardProps> = ({
       case 'phone':
         return <Phone className="w-5 h-5 text-cyan-500" />;
       case 'upi':
-        return <IndianRupee className="w-5 h-5 text-purple-500" />;
+        return <IndianRupee className="w-5 h-5 text-emerald-500" />;
       default:
         return <AlignLeft className="w-5 h-5 text-slate-500" />;
     }
@@ -109,7 +109,7 @@ export const ScanResultCard: React.FC<ScanResultCardProps> = ({
             href={result.rawText}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs sm:text-sm flex items-center justify-center space-x-2 shadow-md shadow-indigo-600/20 transition"
+            className="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-950 font-semibold text-xs sm:text-sm flex items-center justify-center space-x-2 shadow-md shadow-slate-900/10 dark:shadow-white/10 transition"
           >
             <ExternalLink className="w-4 h-4" />
             <span>Open Link in New Tab</span>
@@ -131,15 +131,15 @@ export const ScanResultCard: React.FC<ScanResultCardProps> = ({
             onClick={() => handleCopy(result.rawText)}
             className="py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold text-xs flex items-center justify-center space-x-1.5 transition"
           >
-            {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4 text-indigo-500" />}
+            {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4 text-slate-700 dark:text-slate-300" />}
             <span>{copied ? 'Copied!' : 'Copy Decoded Text'}</span>
           </button>
 
           <button
             onClick={() => onSendToGenerator(result.rawText, result.type)}
-            className="py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-indigo-600 dark:text-indigo-400 font-semibold text-xs flex items-center justify-center space-x-1.5 transition"
+            className="py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-xs flex items-center justify-center space-x-1.5 transition"
           >
-            <Sparkles className="w-4 h-4" />
+            <Sparkles className="w-4 h-4 text-slate-700 dark:text-slate-300" />
             <span>Edit in Generator</span>
           </button>
         </div>

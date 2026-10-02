@@ -25,13 +25,13 @@ export const ToastContainer: React.FC<ToastProps> = ({ toasts, removeToast }) =>
               ? 'bg-emerald-50/95 dark:bg-emerald-950/90 text-emerald-800 dark:text-emerald-200 border-emerald-200 dark:border-emerald-800'
               : toast.type === 'error'
               ? 'bg-rose-50/95 dark:bg-rose-950/90 text-rose-800 dark:text-rose-200 border-rose-200 dark:border-rose-800'
-              : 'bg-indigo-50/95 dark:bg-indigo-950/90 text-indigo-800 dark:text-indigo-200 border-indigo-200 dark:border-indigo-800'
+              : 'bg-slate-900/95 dark:bg-slate-850/95 text-white border-slate-700/80 shadow-xl'
           }`}
         >
           <div className="flex items-center space-x-2.5">
             {toast.type === 'success' && <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />}
             {toast.type === 'error' && <AlertCircle className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0" />}
-            {toast.type === 'info' && <Info className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0" />}
+            {toast.type === 'info' && <Info className="w-5 h-5 text-slate-300 shrink-0" />}
             <p className="text-xs sm:text-sm font-medium">{toast.message}</p>
           </div>
           <button
